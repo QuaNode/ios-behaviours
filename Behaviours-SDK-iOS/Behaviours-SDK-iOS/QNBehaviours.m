@@ -29,7 +29,7 @@ static QNBehaviours *sharedBehaviours = nil;
                 @throw [[NSException alloc] initWithName:@"QNBehavioursInitException" reason:@"you should provide base path" userInfo:nil];
             }
             QNHTTPDataOperation *operation = [[QNHTTPDataOperation alloc] init];
-            operation.path = @"/api/v1/behaviours";
+            operation.path = @"/behaviours";
             operation.method = @"GET";
             QNHTTPDataController *controller = [QNHTTPDataController sharedController];
             controller.basePath = basePath;
@@ -41,6 +41,7 @@ static QNBehaviours *sharedBehaviours = nil;
                     sharedBehaviours->behavioursJSON = operation.response;
                 } else {
                     
+                    NSLog(@"%@ %@", operation.error, operation.response);
                     @throw [[NSException alloc] initWithName:@"QNBehavioursInitException" reason:@"failed to init behaviours" userInfo:nil];
                 }
             }];
@@ -59,13 +60,17 @@ static QNBehaviours *sharedBehaviours = nil;
     return self;
 }
 
+- (NSString *)basePath {
+    
+    return [QNHTTPDataController sharedController].basePath;
+}
+
 - (void(^)(NSDictionary *, void(^)(NSDictionary *, NSError *)))getBehaviour:(NSString *)behaviourName {
     
     if (!behavioursJSON[behaviourName]) {
         
         return nil;
     }
-    __weak QNBehaviours *SELF = self;
     return [^(NSDictionary *data, void(^callback)(NSDictionary *, NSError *)) {
         
         NSDictionary *behaviour = behavioursJSON[behaviourName];
@@ -83,12 +88,12 @@ static QNBehaviours *sharedBehaviours = nil;
         }
         for (NSString *key in data) {
             
-            switch ([parameterTypes[behaviour[key][@"type"]] intValue]) {
+            switch ([parameterTypes[behaviour[@"parameters"][key][@"type"]] intValue]) {
                 case 0:
-                    headers[behaviour[key][@"key"]] = data[key];
+                    headers[behaviour[@"parameters"][key][@"key"]] = data[key];
                     break;
                 case 1:{
-                    NSArray *components = [behaviour[key][@"key"] componentsSeparatedByString:@"."];
+                    NSArray *components = [behaviour[@"parameters"][key][@"key"] componentsSeparatedByString:@"."];
                     NSMutableDictionary *subBody = body;
                     for (NSString *component in [components subarrayWithRange:(NSRange){0, components.count - 1}]) {
                         
@@ -107,8 +112,9 @@ static QNBehaviours *sharedBehaviours = nil;
         QNHTTPDataOperation *operation = [[QNHTTPDataOperation alloc] init];
         operation.path = behaviour[@"path"];
         operation.method = behaviour[@"method"];
+        operation.headers = headers.copy;
+        operation.body = body.copy;
         QNHTTPDataController *controller = [QNHTTPDataController sharedController];
-        controller.basePath = SELF.basePath;
         [controller executeOperation:operation withCompletion:^(QNHTTPDataOperation *operation){
             
             if (callback) {

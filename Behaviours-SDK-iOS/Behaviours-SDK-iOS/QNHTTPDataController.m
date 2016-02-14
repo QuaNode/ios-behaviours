@@ -77,7 +77,7 @@ static QNHTTPDataController *sharedController;
         
         [query appendFormat:@"%@%@=%@",query.length == 0 ? @"?" : @"&", [key stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]], [operation.query[key] isKindOfClass:[NSString class]] ? [operation.query[key] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]] : operation.query[key]];
     }
-    NSString *url = [NSString stringWithFormat:@"%@/%@%@",self.basePath, operation.path,query];
+    NSString *url = [NSString stringWithFormat:@"%@%@%@",self.basePath, operation.path,query];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
     for (NSString *key in operation.headers) {
         
