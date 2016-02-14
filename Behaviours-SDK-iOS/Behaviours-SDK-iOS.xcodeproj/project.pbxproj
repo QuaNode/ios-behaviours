@@ -1,0 +1,382 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8AE64EDA1C70559600C7FDB1 /* QNBehaviours.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AE64ED91C70559600C7FDB1 /* QNBehaviours.h */; };
+		8AE64EDC1C70559600C7FDB1 /* QNBehaviours.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EDB1C70559600C7FDB1 /* QNBehaviours.m */; };
+		8AE64EEB1C705A7200C7FDB1 /* QNDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EE41C705A7200C7FDB1 /* QNDataController.m */; };
+		8AE64EEC1C705A7200C7FDB1 /* QNDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EE61C705A7200C7FDB1 /* QNDataOperation.m */; };
+		8AE64EED1C705A7200C7FDB1 /* QNHTTPDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EE81C705A7200C7FDB1 /* QNHTTPDataController.m */; };
+		8AE64EEE1C705A7200C7FDB1 /* QNHTTPDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EEA1C705A7200C7FDB1 /* QNHTTPDataOperation.m */; };
+		8AE64EF01C705DEE00C7FDB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AE64EEF1C705DEE00C7FDB1 /* UIKit.framework */; };
+		8AE64EFF1C705E6900C7FDB1 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AE64EFE1C705E6900C7FDB1 /* AppKit.framework */; };
+		8AE64F001C70613400C7FDB1 /* QNHTTPDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EEA1C705A7200C7FDB1 /* QNHTTPDataOperation.m */; };
+		8AE64F011C70646400C7FDB1 /* QNHTTPDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EE81C705A7200C7FDB1 /* QNHTTPDataController.m */; };
+		8AE64F021C70646900C7FDB1 /* QNDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EE61C705A7200C7FDB1 /* QNDataOperation.m */; };
+		8AE64F031C70646D00C7FDB1 /* QNDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EE41C705A7200C7FDB1 /* QNDataController.m */; };
+		8AE64F041C70647200C7FDB1 /* QNBehaviours.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EDB1C70559600C7FDB1 /* QNBehaviours.m */; };
+		8AE64F081C7079F000C7FDB1 /* QNBehaviours.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AE64ED91C70559600C7FDB1 /* QNBehaviours.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8AE64ED41C70559500C7FDB1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				8AE64EDA1C70559600C7FDB1 /* QNBehaviours.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AE64F071C7079E000C7FDB1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				8AE64F081C7079F000C7FDB1 /* QNBehaviours.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8AE64ED61C70559500C7FDB1 /* libBehaviours-SDK-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libBehaviours-SDK-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AE64ED91C70559600C7FDB1 /* QNBehaviours.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNBehaviours.h; sourceTree = "<group>"; };
+		8AE64EDB1C70559600C7FDB1 /* QNBehaviours.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QNBehaviours.m; sourceTree = "<group>"; };
+		8AE64EE31C705A7200C7FDB1 /* QNDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNDataController.h; sourceTree = "<group>"; };
+		8AE64EE41C705A7200C7FDB1 /* QNDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNDataController.m; sourceTree = "<group>"; };
+		8AE64EE51C705A7200C7FDB1 /* QNDataOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNDataOperation.h; sourceTree = "<group>"; };
+		8AE64EE61C705A7200C7FDB1 /* QNDataOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNDataOperation.m; sourceTree = "<group>"; };
+		8AE64EE71C705A7200C7FDB1 /* QNHTTPDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNHTTPDataController.h; sourceTree = "<group>"; };
+		8AE64EE81C705A7200C7FDB1 /* QNHTTPDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNHTTPDataController.m; sourceTree = "<group>"; };
+		8AE64EE91C705A7200C7FDB1 /* QNHTTPDataOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNHTTPDataOperation.h; sourceTree = "<group>"; };
+		8AE64EEA1C705A7200C7FDB1 /* QNHTTPDataOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNHTTPDataOperation.m; sourceTree = "<group>"; };
+		8AE64EEF1C705DEE00C7FDB1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8AE64EF51C705E5A00C7FDB1 /* libBehaviours-SDK-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libBehaviours-SDK-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AE64EFE1C705E6900C7FDB1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8AE64ED31C70559500C7FDB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AE64EF01C705DEE00C7FDB1 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AE64EF21C705E5A00C7FDB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AE64EFF1C705E6900C7FDB1 /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8AE64ECD1C70559500C7FDB1 = {
+			isa = PBXGroup;
+			children = (
+				8AE64EFE1C705E6900C7FDB1 /* AppKit.framework */,
+				8AE64EEF1C705DEE00C7FDB1 /* UIKit.framework */,
+				8AE64ED81C70559600C7FDB1 /* Behaviours-SDK */,
+				8AE64ED71C70559500C7FDB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8AE64ED71C70559500C7FDB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AE64ED61C70559500C7FDB1 /* libBehaviours-SDK-iOS.a */,
+				8AE64EF51C705E5A00C7FDB1 /* libBehaviours-SDK-Mac.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AE64ED81C70559600C7FDB1 /* Behaviours-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				8AE64ED91C70559600C7FDB1 /* QNBehaviours.h */,
+				8AE64EDB1C70559600C7FDB1 /* QNBehaviours.m */,
+				8AE64EE21C705A5A00C7FDB1 /* Integration */,
+			);
+			name = "Behaviours-SDK";
+			path = "Behaviours-SDK-iOS";
+			sourceTree = "<group>";
+		};
+		8AE64EE21C705A5A00C7FDB1 /* Integration */ = {
+			isa = PBXGroup;
+			children = (
+				8AE64EE31C705A7200C7FDB1 /* QNDataController.h */,
+				8AE64EE41C705A7200C7FDB1 /* QNDataController.m */,
+				8AE64EE51C705A7200C7FDB1 /* QNDataOperation.h */,
+				8AE64EE61C705A7200C7FDB1 /* QNDataOperation.m */,
+				8AE64EE71C705A7200C7FDB1 /* QNHTTPDataController.h */,
+				8AE64EE81C705A7200C7FDB1 /* QNHTTPDataController.m */,
+				8AE64EE91C705A7200C7FDB1 /* QNHTTPDataOperation.h */,
+				8AE64EEA1C705A7200C7FDB1 /* QNHTTPDataOperation.m */,
+			);
+			name = Integration;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8AE64ED51C70559500C7FDB1 /* Behaviours-SDK-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AE64EDF1C70559600C7FDB1 /* Build configuration list for PBXNativeTarget "Behaviours-SDK-iOS" */;
+			buildPhases = (
+				8AE64ED21C70559500C7FDB1 /* Sources */,
+				8AE64ED31C70559500C7FDB1 /* Frameworks */,
+				8AE64ED41C70559500C7FDB1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Behaviours-SDK-iOS";
+			productName = "Behaviours-SDK-iOS";
+			productReference = 8AE64ED61C70559500C7FDB1 /* libBehaviours-SDK-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8AE64EF41C705E5A00C7FDB1 /* Behaviours-SDK-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AE64EFB1C705E5B00C7FDB1 /* Build configuration list for PBXNativeTarget "Behaviours-SDK-Mac" */;
+			buildPhases = (
+				8AE64EF11C705E5A00C7FDB1 /* Sources */,
+				8AE64EF21C705E5A00C7FDB1 /* Frameworks */,
+				8AE64F071C7079E000C7FDB1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Behaviours-SDK-Mac";
+			productName = "Behaviours-SDK-Mac";
+			productReference = 8AE64EF51C705E5A00C7FDB1 /* libBehaviours-SDK-Mac.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8AE64ECE1C70559500C7FDB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = QuaNode;
+				TargetAttributes = {
+					8AE64ED51C70559500C7FDB1 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					8AE64EF41C705E5A00C7FDB1 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 8AE64ED11C70559500C7FDB1 /* Build configuration list for PBXProject "Behaviours-SDK-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8AE64ECD1C70559500C7FDB1;
+			productRefGroup = 8AE64ED71C70559500C7FDB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8AE64ED51C70559500C7FDB1 /* Behaviours-SDK-iOS */,
+				8AE64EF41C705E5A00C7FDB1 /* Behaviours-SDK-Mac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AE64ED21C70559500C7FDB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AE64EEC1C705A7200C7FDB1 /* QNDataOperation.m in Sources */,
+				8AE64EEE1C705A7200C7FDB1 /* QNHTTPDataOperation.m in Sources */,
+				8AE64EED1C705A7200C7FDB1 /* QNHTTPDataController.m in Sources */,
+				8AE64EDC1C70559600C7FDB1 /* QNBehaviours.m in Sources */,
+				8AE64EEB1C705A7200C7FDB1 /* QNDataController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AE64EF11C705E5A00C7FDB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AE64F041C70647200C7FDB1 /* QNBehaviours.m in Sources */,
+				8AE64F011C70646400C7FDB1 /* QNHTTPDataController.m in Sources */,
+				8AE64F001C70613400C7FDB1 /* QNHTTPDataOperation.m in Sources */,
+				8AE64F031C70646D00C7FDB1 /* QNDataController.m in Sources */,
+				8AE64F021C70646900C7FDB1 /* QNDataOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8AE64EDD1C70559600C7FDB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8AE64EDE1C70559600C7FDB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8AE64EE01C70559600C7FDB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8AE64EE11C70559600C7FDB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8AE64EFC1C705E5B00C7FDB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8AE64EFD1C705E5B00C7FDB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8AE64ED11C70559500C7FDB1 /* Build configuration list for PBXProject "Behaviours-SDK-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AE64EDD1C70559600C7FDB1 /* Debug */,
+				8AE64EDE1C70559600C7FDB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AE64EDF1C70559600C7FDB1 /* Build configuration list for PBXNativeTarget "Behaviours-SDK-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AE64EE01C70559600C7FDB1 /* Debug */,
+				8AE64EE11C70559600C7FDB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8AE64EFB1C705E5B00C7FDB1 /* Build configuration list for PBXNativeTarget "Behaviours-SDK-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AE64EFC1C705E5B00C7FDB1 /* Debug */,
+				8AE64EFD1C705E5B00C7FDB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8AE64ECE1C70559500C7FDB1 /* Project object */;
+}
