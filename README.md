@@ -1,2 +1,2 @@
-# Behaviours-SDK-iOS
-Behaviours-SDK-iOS
+# ios-behaviours
+iOS client for Behaviours
