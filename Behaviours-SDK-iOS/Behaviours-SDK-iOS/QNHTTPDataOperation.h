@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSDictionary *headers;
 @property (nonatomic, strong) NSString* method;
 @property (nonatomic, strong) NSError *error;
-@property (nonatomic, strong) NSDictionary *response;
+@property (nonatomic, strong) NSDictionary *responseBody;
+@property (nonatomic, strong) NSDictionary *responseHeaders;
 
 @end

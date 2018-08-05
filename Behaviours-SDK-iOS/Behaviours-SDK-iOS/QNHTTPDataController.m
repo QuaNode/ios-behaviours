@@ -35,7 +35,7 @@
 - (id)Null_Values_objectForKeyedSubscript:(id)key {
     
     NSString *value = [self Null_Values_objectForKeyedSubscript:key];
-    if (![value isKindOfClass:[NSString class]] || ![value.lowercaseString containsString:@"null"]) {
+    if (![value isKindOfClass:[NSString class]] || ![value.lowercaseString isEqualToString:@"null"]) {
         
         return value;
     }
@@ -115,7 +115,8 @@ static QNHTTPDataController *sharedController;
                     NSLog(@"%@ %@: %@", [self class], NSStringFromSelector(_cmd), err);
                     operation.error = err;
                 }
-                operation.response = responseObject.copy;
+                operation.responseBody = responseObject.copy;
+                operation.responseHeaders = ((NSHTTPURLResponse *)response).allHeaderFields;
             }
         } else {
             

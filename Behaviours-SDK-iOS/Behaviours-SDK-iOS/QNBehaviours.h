@@ -11,12 +11,13 @@
 @interface QNBehaviours : NSObject {
     
 @private NSDictionary *behavioursJSON;
+@private NSDictionary *parameters;
     
 }
 
 @property (nonatomic, readonly) NSString *basePath;
 
-+ (QNBehaviours *)sharedBehaviours:(NSString *)basePath;
++ (QNBehaviours *)sharedBehaviours:(NSString *)basePath withDefaults:(NSDictionary *)defaults;
 
 - (void(^)(NSDictionary *, void(^)(NSDictionary *, NSError *)))getBehaviour:(NSString *)behaviourName;
 
