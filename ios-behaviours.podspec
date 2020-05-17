@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "ios-behaviours"
-  spec.version      = "2.0.0"
+  spec.version      = "2.0.1"
   spec.summary      = "iOS and macOS client for Behaviours"
   spec.description  = "Behavious is a BaaS platform built on BeamJS"
   spec.homepage     = "http://quanode.com"
@@ -18,8 +18,8 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios
   spec.platform     = :osx
   spec.ios.deployment_target = "8.0"
-  spec.osx.deployment_target = "10.6"
-  spec.source       = { :git => "https://github.com/QuaNode/ios-behaviours", :tag => "#{spec.version}" }
+  spec.osx.deployment_target = "10.9"
+  spec.source       = { :git => "https://github.com/QuaNode/ios-behaviours", :tag => "v2.0.1" }
   spec.source_files = "Behaviours-SDK-iOS"
 
 end
