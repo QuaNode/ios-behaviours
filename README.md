@@ -1,2 +1,2 @@
 # ios-behaviours
-iOS client for Behaviours
+iOS and macOS client for Behaviours

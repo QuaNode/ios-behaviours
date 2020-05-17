@@ -12,7 +12,7 @@
 
 @interface QNHTTPDataController : QNDataController<QNHTTPDataOperation *> 
 
-@property (nonatomic, copy) NSString *basePath;
+@property (nonatomic, copy) NSString *baseURL;
 
 + (QNHTTPDataController *)sharedController;
 

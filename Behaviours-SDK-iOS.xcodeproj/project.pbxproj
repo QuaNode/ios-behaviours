@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A455EF0246ECB4300489293 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A455EEF246ECB4300489293 /* AppKit.framework */; };
 		8AE64EDA1C70559600C7FDB1 /* QNBehaviours.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AE64ED91C70559600C7FDB1 /* QNBehaviours.h */; };
 		8AE64EDC1C70559600C7FDB1 /* QNBehaviours.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EDB1C70559600C7FDB1 /* QNBehaviours.m */; };
 		8AE64EEB1C705A7200C7FDB1 /* QNDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EE41C705A7200C7FDB1 /* QNDataController.m */; };
 		8AE64EEC1C705A7200C7FDB1 /* QNDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EE61C705A7200C7FDB1 /* QNDataOperation.m */; };
 		8AE64EED1C705A7200C7FDB1 /* QNHTTPDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EE81C705A7200C7FDB1 /* QNHTTPDataController.m */; };
 		8AE64EEE1C705A7200C7FDB1 /* QNHTTPDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EEA1C705A7200C7FDB1 /* QNHTTPDataOperation.m */; };
-		8AE64EF01C705DEE00C7FDB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AE64EEF1C705DEE00C7FDB1 /* UIKit.framework */; };
-		8AE64EFF1C705E6900C7FDB1 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AE64EFE1C705E6900C7FDB1 /* AppKit.framework */; };
 		8AE64F001C70613400C7FDB1 /* QNHTTPDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EEA1C705A7200C7FDB1 /* QNHTTPDataOperation.m */; };
 		8AE64F011C70646400C7FDB1 /* QNHTTPDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EE81C705A7200C7FDB1 /* QNHTTPDataController.m */; };
 		8AE64F021C70646900C7FDB1 /* QNDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EE61C705A7200C7FDB1 /* QNDataOperation.m */; };
@@ -47,6 +46,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8A455EED246ECAEF00489293 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8A455EEF246ECB4300489293 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
 		8AE64ED61C70559500C7FDB1 /* libBehaviours-SDK-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libBehaviours-SDK-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE64ED91C70559600C7FDB1 /* QNBehaviours.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNBehaviours.h; sourceTree = "<group>"; };
 		8AE64EDB1C70559600C7FDB1 /* QNBehaviours.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QNBehaviours.m; sourceTree = "<group>"; };
@@ -58,9 +59,7 @@
 		8AE64EE81C705A7200C7FDB1 /* QNHTTPDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNHTTPDataController.m; sourceTree = "<group>"; };
 		8AE64EE91C705A7200C7FDB1 /* QNHTTPDataOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNHTTPDataOperation.h; sourceTree = "<group>"; };
 		8AE64EEA1C705A7200C7FDB1 /* QNHTTPDataOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNHTTPDataOperation.m; sourceTree = "<group>"; };
-		8AE64EEF1C705DEE00C7FDB1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8AE64EF51C705E5A00C7FDB1 /* libBehaviours-SDK-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libBehaviours-SDK-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AE64EFE1C705E6900C7FDB1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +67,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AE64EF01C705DEE00C7FDB1 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AE64EFF1C705E6900C7FDB1 /* AppKit.framework in Frameworks */,
+				8A455EF0246ECB4300489293 /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +84,8 @@
 		8A37433C1ECEE7D8001FD7B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A455EEF246ECB4300489293 /* AppKit.framework */,
+				8A455EED246ECAEF00489293 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -93,8 +93,6 @@
 		8AE64ECD1C70559500C7FDB1 = {
 			isa = PBXGroup;
 			children = (
-				8AE64EFE1C705E6900C7FDB1 /* AppKit.framework */,
-				8AE64EEF1C705DEE00C7FDB1 /* UIKit.framework */,
 				8AE64ED81C70559600C7FDB1 /* Behaviours-SDK */,
 				8AE64ED71C70559500C7FDB1 /* Products */,
 				8A37433C1ECEE7D8001FD7B9 /* Frameworks */,
@@ -179,7 +177,7 @@
 		8AE64ECE1C70559500C7FDB1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = QuaNode;
 				TargetAttributes = {
 					8AE64ED51C70559500C7FDB1 = {
@@ -192,10 +190,11 @@
 			};
 			buildConfigurationList = 8AE64ED11C70559500C7FDB1 /* Build configuration list for PBXProject "Behaviours-SDK-iOS" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 8AE64ECD1C70559500C7FDB1;
 			productRefGroup = 8AE64ED71C70559500C7FDB1 /* Products */;
@@ -240,6 +239,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -282,7 +282,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -293,6 +294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -329,7 +331,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

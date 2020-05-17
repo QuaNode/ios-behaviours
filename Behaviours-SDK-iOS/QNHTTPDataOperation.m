@@ -70,9 +70,9 @@ static NSString *systemSymbol;
     
     NSString *preferredLanguageCodes = [[NSLocale preferredLanguages] componentsJoinedByString:@", "];
     return @{
-             @"Accept-Language" :[NSString stringWithFormat:@"%@, en-us;q=0.8", preferredLanguageCodes],
-             @"User-Agent" : [NSString stringWithFormat:@"%@/%@ (%@; %@ %@; Scale/%0.2f)", [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleExecutableKey] ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleIdentifierKey], (__bridge id)CFBundleGetValueForInfoDictionaryKey(CFBundleGetMainBundle(), kCFBundleVersionKey) ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey], model, systemSymbol, version,scale]
-             };
+         @"Accept-Language" :[NSString stringWithFormat:@"%@, en-us;q=0.8", preferredLanguageCodes],
+         @"User-Agent" : [NSString stringWithFormat:@"%@/%@ (%@; %@ %@; Scale/%0.2f)", [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleExecutableKey] ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleIdentifierKey], (__bridge id)CFBundleGetValueForInfoDictionaryKey(CFBundleGetMainBundle(), kCFBundleVersionKey) ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey], model, systemSymbol, version,scale]
+    };
 }
 
 @end

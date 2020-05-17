@@ -35,7 +35,7 @@
 - (id)Null_Values_objectForKeyedSubscript:(id)key {
     
     NSString *value = [self Null_Values_objectForKeyedSubscript:key];
-    if (![value isKindOfClass:[NSString class]] || ![value.lowercaseString isEqualToString:@"null"]) {
+    if (![value isKindOfClass:NSString.class] || ![value.lowercaseString isEqualToString:@"null"]) {
         
         return value;
     }
@@ -75,9 +75,9 @@ static QNHTTPDataController *sharedController;
     NSMutableString *query = @"".mutableCopy;
     for (NSString *key in operation.query) {
         
-        [query appendFormat:@"%@%@=%@",query.length == 0 ? @"?" : @"&", [key stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]], [operation.query[key] isKindOfClass:[NSString class]] ? [operation.query[key] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]] : operation.query[key]];
+        [query appendFormat:@"%@%@=%@",query.length == 0 ? @"?" : @"&", [key stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]], [operation.query[key] isKindOfClass:NSString.class] ? [operation.query[key] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]] : operation.query[key]];
     }
-    NSString *url = [NSString stringWithFormat:@"%@%@%@",self.basePath, operation.path,query];
+    NSString *url = [NSString stringWithFormat:@"%@%@%@", self.baseURL, operation.path,query];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
     for (NSString *key in operation.headers) {
         
@@ -106,8 +106,7 @@ static QNHTTPDataController *sharedController;
         if (!error) {
             
             if (data.length > 0) {
-                
-                //NSLog(@"%@", [[NSString alloc] initWithBytes:data.bytes length:data.length encoding:NSUTF8StringEncoding]);
+                               
                 NSError *err = nil;
                 NSMutableDictionary *responseObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&err];
                 if (err) {
