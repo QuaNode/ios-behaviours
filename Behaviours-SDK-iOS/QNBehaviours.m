@@ -335,7 +335,7 @@ static QNBehaviours *sharedBehaviours = nil;
         id value = parameter.value;
         if ([value isKindOfClass:NSClassFromString(@"NSBlock")]) return ((id(^)(NSString*,NSDictionary*))value)(name, data);
         if (value) return value;
-        if ([parameter.source boolValue]) return [[self parameterFromCache:key][key] value];
+        if ([parameter.source boolValue]) return [(NSDictionary *)[self parameterFromCache:key][key] value];
         return nil;
     }());
 }
@@ -493,8 +493,8 @@ static QNBehaviours *sharedBehaviours = nil;
                                         
                                         if (([otherPurpose isKindOfClass:NSDictionary.class] && isPurposeConstant(otherPurpose.as)) || isPurposeConstant((NSString *)otherPurpose )) {
                                             
-                                            [param[paramKey] setValue:paramValue];
-                                            [parameters[paramKey] setValue:paramValue];
+                                            [(NSMutableDictionary *)param[paramKey] setValue:paramValue];
+                                            [(NSMutableDictionary *)parameters[paramKey] setValue:paramValue];
                                             break;
                                         }
                                     }
