@@ -268,7 +268,6 @@ static QNBehaviours *sharedBehaviours = nil;
                             } copy]);
                             NSString *typeEncoding = [NSString stringWithFormat:@"%s%s%s%s", @encode(void), @encode(id), @encode(NSDictionary *), @encode(void(^)(NSDictionary *, NSError *))];
                             class_replaceMethod([sharedBehaviours class], hasSelectorB ? selectorB : selectorA, behaviourImplementation, [typeEncoding UTF8String]);
-                            imp_removeBlock(behaviourImplementation);
                         }
                         for (void(^callback)(void) in sharedBehaviours->backgroundCallbacks) {
                             
