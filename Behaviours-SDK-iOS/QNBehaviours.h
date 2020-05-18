@@ -21,8 +21,8 @@
 
 @property (nonatomic, readonly) NSString *baseURL;
 
-+ (QNBehaviours *)sharedBehaviours:(NSString *)baseURL withErrorCallback:(void(^)(NSError *))errorCallback andDefaults:(NSDictionary *)defaults;
-- (void)onReady:(void(^)(void))callback;
-- (void(^)(NSDictionary *, void(^)(NSDictionary *, NSError *)))getBehaviour:(NSString *)behaviourName;
++ (QNBehaviours *)sharedBehaviours:(NSString *)baseURL withErrorCallback:(void(^)(NSError *))errorCallback andDefaults:(NSDictionary *)defaults NS_SWIFT_NAME(shared(behavioursBaseURL:withErrorCallback:andDefaults:));
+- (void)onReady:(void(^)(void))callback NS_SWIFT_NAME(ready(_:));
+- (void(^)(NSDictionary *, void(^)(NSDictionary *, NSError *)))getBehaviour:(NSString *)behaviourName NS_SWIFT_NAME(get(behaviour:));
 
 @end

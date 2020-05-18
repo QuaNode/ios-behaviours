@@ -260,16 +260,15 @@ static QNBehaviours *sharedBehaviours = nil;
                         for (NSString *key in [sharedBehaviours->behavioursBody allKeys]) {
                             
                             SEL selectorA = NSSelectorFromString([key stringByAppendingString:@"With:andCompletion:"]);
-                            SEL selectorB = NSSelectorFromString([key stringByAppendingString:@"with:andCompletion:"]);
-                            SEL selectorC = NSSelectorFromString([key stringByAppendingString:@"::"]);
+                            SEL selectorB = NSSelectorFromString([key stringByAppendingString:@"::"]);
                             BOOL hasSelectorB = class_respondsToSelector([sharedBehaviours class], selectorB);
-                            BOOL hasSelectorC = class_respondsToSelector([sharedBehaviours class], selectorC);
-                            IMP behaviourImplementation = imp_implementationWithBlock(^(id self, SEL _cmd, NSDictionary *behaviourData, void(^completion)(NSDictionary *, NSError *)) {
+                            IMP behaviourImplementation = imp_implementationWithBlock([^void(id self, NSDictionary *behaviourData, void(^completion)(NSDictionary *, NSError *)) {
                                 
                                 [sharedBehaviours getBehaviour:key](behaviourData, completion);
-                            });
-                            NSString *typeEncoding = [NSString stringWithFormat:@"%s%s%s%s%s", @encode(void), @encode(id), @encode(SEL),  @encode(NSDictionary *), @encode(void(^)(NSDictionary *, NSError *))];
-                            class_replaceMethod([sharedBehaviours class],  hasSelectorC ? selectorC : hasSelectorB ? selectorB : selectorA, behaviourImplementation, [typeEncoding UTF8String]);
+                            } copy]);
+                            NSString *typeEncoding = [NSString stringWithFormat:@"%s%s%s%s", @encode(void), @encode(id), @encode(NSDictionary *), @encode(void(^)(NSDictionary *, NSError *))];
+                            class_replaceMethod([sharedBehaviours class], hasSelectorB ? selectorB : selectorA, behaviourImplementation, [typeEncoding UTF8String]);
+                            imp_removeBlock(behaviourImplementation);
                         }
                         for (void(^callback)(void) in sharedBehaviours->backgroundCallbacks) {
                             
@@ -298,14 +297,6 @@ static QNBehaviours *sharedBehaviours = nil;
 + (id)allocWithZone:(NSZone *)zone {
     
     return [[self sharedBehaviours:nil withErrorCallback:nil andDefaults:nil] self];
-}
-
-+ (void)load {
-    
-    if (class_respondsToSelector([sharedBehaviours class], NSSelectorFromString(@"ready:"))) {
-        
-        class_replaceMethod([sharedBehaviours class], NSSelectorFromString(@"ready:"), class_getMethodImplementation([sharedBehaviours class], @selector(onReady:)), method_getTypeEncoding(class_getClassMethod([sharedBehaviours class], @selector(onReady:))));
-    }
 }
 
 - (id)copyWithZone:(NSZone *)zone {
