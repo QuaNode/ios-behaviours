@@ -262,10 +262,10 @@ static QNBehaviours *sharedBehaviours = nil;
                             SEL selectorA = NSSelectorFromString([key stringByAppendingString:@"With:andCompletion:"]);
                             SEL selectorB = NSSelectorFromString([key stringByAppendingString:@"::"]);
                             BOOL hasSelectorB = class_respondsToSelector([sharedBehaviours class], selectorB);
-                            IMP behaviourImplementation = imp_implementationWithBlock([^void(id self, NSDictionary *behaviourData, void(^completion)(NSDictionary *, NSError *)) {
+                            IMP behaviourImplementation = imp_implementationWithBlock(^void(id self, NSDictionary *behaviourData, void(^completion)(NSDictionary *, NSError *)) {
                                 
                                 [sharedBehaviours getBehaviour:key](behaviourData, completion);
-                            } copy]);
+                            });
                             NSString *typeEncoding = [NSString stringWithFormat:@"%s%s%s%s", @encode(void), @encode(id), @encode(NSDictionary *), @encode(void(^)(NSDictionary *, NSError *))];
                             class_replaceMethod([sharedBehaviours class], hasSelectorB ? selectorB : selectorA, behaviourImplementation, [typeEncoding UTF8String]);
                         }
@@ -291,6 +291,11 @@ static QNBehaviours *sharedBehaviours = nil;
         }
     }
     return sharedBehaviours;
+}
+
++ (id)alloc {
+    
+    return [[self sharedBehaviours:nil withErrorCallback:nil andDefaults:nil] self];
 }
 
 + (id)allocWithZone:(NSZone *)zone {
