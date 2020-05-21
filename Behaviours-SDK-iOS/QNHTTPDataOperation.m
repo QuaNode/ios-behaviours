@@ -38,6 +38,15 @@ static NSString *version;
 static float scale;
 static NSString *systemSymbol;
 
+@implementation NSError (Message)
+
+- (NSString *)message {
+    
+    return self.userInfo[NSLocalizedFailureReasonErrorKey];
+}
+
+@end
+
 @implementation QNHTTPDataOperation
 
 + (void)load {

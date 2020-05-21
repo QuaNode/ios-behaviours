@@ -49,9 +49,6 @@
     }
 }
 
-- (void)executeOperation:(QNDataOperation *)operation {
-    
-    
-}
+- (void)executeOperation:(QNDataOperation *)operation { }
 
 @end

@@ -293,11 +293,6 @@ static QNBehaviours *sharedBehaviours = nil;
     return sharedBehaviours;
 }
 
-+ (id)alloc {
-    
-    return [[self sharedBehaviours:nil withErrorCallback:nil andDefaults:nil] self];
-}
-
 + (id)allocWithZone:(NSZone *)zone {
     
     return [[self sharedBehaviours:nil withErrorCallback:nil andDefaults:nil] self];

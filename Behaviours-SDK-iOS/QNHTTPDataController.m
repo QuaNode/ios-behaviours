@@ -103,23 +103,23 @@ static QNHTTPDataController *sharedController;
     __weak NSCondition *CONDITION = condition;
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * __nullable data, NSURLResponse * __nullable response, NSError * __nullable error){
         
-        if (!error) {
-            
-            if (data.length > 0) {
-                               
-                NSError *err = nil;
-                NSMutableDictionary *responseObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&err];
-                if (err) {
-                    
-                    NSLog(@"%@ %@: %@", [self class], NSStringFromSelector(_cmd), err);
-                    operation.error = err;
-                }
-                operation.responseBody = responseObject.copy;
-                operation.responseHeaders = ((NSHTTPURLResponse *)response).allHeaderFields;
+        if (data.length > 0) {
+                           
+            NSError *err = nil;
+            NSMutableDictionary *responseObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&err];
+            if (err) {
+                
+                NSLog(@"%@ %@: %@", [self class], NSStringFromSelector(_cmd), err);
+                operation.error = err;
             }
-        } else {
-            
-            operation.error = error;
+            operation.responseBody = responseObject.copy;
+            operation.responseHeaders = ((NSHTTPURLResponse *)response).allHeaderFields;
+        }
+        NSInteger statusCode = ((NSHTTPURLResponse *)response).statusCode;
+        if (!operation.error && (error || statusCode != 200)) {
+                       
+            NSString *statusText = [NSHTTPURLResponse localizedStringForStatusCode:statusCode];
+            operation.error = error ?: [[NSError alloc] initWithDomain:statusText code:statusCode userInfo:@{NSLocalizedFailureReasonErrorKey: operation.responseBody[@"message"]}];
         }
         [CONDITION signal];
     }];

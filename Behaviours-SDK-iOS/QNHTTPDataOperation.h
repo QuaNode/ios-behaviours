@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "QNDataOperation.h"
 
+@interface NSError (Message)
+
+@property (nonatomic, readonly) NSString* message;
+
+@end
+
 @interface QNHTTPDataOperation : QNDataOperation
 
 @property (nonatomic, strong) NSDictionary *query;
