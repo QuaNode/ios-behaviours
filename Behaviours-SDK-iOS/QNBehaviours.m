@@ -469,12 +469,12 @@ static QNBehaviours *sharedBehaviours = nil;
                                         @"type":[(NSDictionary *)behaviour.returns[key] type]
                                     }.mutableCopy;
                                     parameters[paramKey] = param[paramKey];
-                                    if (purpose.unless) {
+                                    if ([purpose isKindOfClass:NSDictionary.class] && purpose.unless) {
                                         
                                         [param[paramKey] setUnless:purpose.unless];
                                         [parameters[paramKey] setUnless:purpose.unless];
                                     }
-                                    if (purpose.ḟor) {
+                                    if ([purpose isKindOfClass:NSDictionary.class]  && purpose.ḟor) {
                                         
                                         [param[paramKey] setFor:purpose.ḟor];
                                         [parameters[paramKey] setFor:purpose.ḟor];

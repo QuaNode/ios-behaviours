@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+NS_SWIFT_NAME(Behaviours)
 @interface QNBehaviours : NSObject {
     
 @private NSDictionary *behavioursBody;
