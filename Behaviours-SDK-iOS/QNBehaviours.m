@@ -503,7 +503,7 @@ static QNBehaviours *sharedBehaviours = nil;
                         
                         NSMutableDictionary *response = headers.mutableCopy;
                         [response addEntriesFromDictionary:body.allKeys.count > 0 ? body : @{
-                            @"data" : operation.responseBody
+                            @"data" : operation.responseBody[@"response"]
                         }];
                         completion([response copy], operation.error);
                     }
@@ -511,7 +511,7 @@ static QNBehaviours *sharedBehaviours = nil;
                     
                     if (completion) {
                         
-                        completion(operation.responseBody, operation.error);
+                        completion(operation.responseBody[@"response"], operation.error);
                     }
                 }
             }];

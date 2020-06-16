@@ -78,10 +78,12 @@ static NSString *systemSymbol;
 - (NSDictionary *)headers {
     
     NSString *preferredLanguageCodes = [[NSLocale preferredLanguages] componentsJoinedByString:@", "];
-    return @{
+    NSMutableDictionary * headers = @{
          @"Accept-Language" :[NSString stringWithFormat:@"%@, en-us;q=0.8", preferredLanguageCodes],
          @"User-Agent" : [NSString stringWithFormat:@"%@/%@ (%@; %@ %@; Scale/%0.2f)", [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleExecutableKey] ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleIdentifierKey], (__bridge id)CFBundleGetValueForInfoDictionaryKey(CFBundleGetMainBundle(), kCFBundleVersionKey) ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey], model, systemSymbol, version,scale]
-    };
+    }.mutableCopy;
+    if (_headers) [headers addEntriesFromDictionary:_headers];
+    return headers.copy;
 }
 
 @end
