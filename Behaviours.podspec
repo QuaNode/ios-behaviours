@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
   spec.summary      = "iOS and macOS client for Behaviours"
   spec.description  = "Behavious is a BaaS platform built on BeamJS"
   spec.homepage     = "http://quanode.com"
-  spec.license      = "MIT"
+  spec.license      = { :type => 'MIT' }
   spec.author       = { "QuaNode" => "info@quanode.com" }
   spec.platform     = :ios
   spec.platform     = :osx
