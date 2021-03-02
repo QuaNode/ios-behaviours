@@ -84,8 +84,7 @@ static QNHTTPDataController *sharedController;
         [request setValue:operation.headers[key] forHTTPHeaderField:key];
     }
     if (operation.body.count > 0) {
-        
-        [request setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+                
         NSError *er = nil;
         [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:operation.body options:0 error:&er]];
         if (er) {

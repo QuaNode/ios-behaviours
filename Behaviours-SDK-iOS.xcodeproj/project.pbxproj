@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		8A455EF0246ECB4300489293 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A455EEF246ECB4300489293 /* AppKit.framework */; };
 		8AE64EDA1C70559600C7FDB1 /* QNBehaviours.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AE64ED91C70559600C7FDB1 /* QNBehaviours.h */; };
-		8AE64EDC1C70559600C7FDB1 /* QNBehaviours.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EDB1C70559600C7FDB1 /* QNBehaviours.m */; };
-		8AE64EEB1C705A7200C7FDB1 /* QNDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EE41C705A7200C7FDB1 /* QNDataController.m */; };
-		8AE64EEC1C705A7200C7FDB1 /* QNDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EE61C705A7200C7FDB1 /* QNDataOperation.m */; };
-		8AE64EED1C705A7200C7FDB1 /* QNHTTPDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EE81C705A7200C7FDB1 /* QNHTTPDataController.m */; };
-		8AE64EEE1C705A7200C7FDB1 /* QNHTTPDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EEA1C705A7200C7FDB1 /* QNHTTPDataOperation.m */; };
+		8AE64EDC1C70559600C7FDB1 /* QNBehaviours.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EDB1C70559600C7FDB1 /* QNBehaviours.m */; settings = {COMPILER_FLAGS = "-fobjc-arc-exceptions"; }; };
+		8AE64EEB1C705A7200C7FDB1 /* QNDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EE41C705A7200C7FDB1 /* QNDataController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc-exceptions"; }; };
+		8AE64EEC1C705A7200C7FDB1 /* QNDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EE61C705A7200C7FDB1 /* QNDataOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc-exceptions"; }; };
+		8AE64EED1C705A7200C7FDB1 /* QNHTTPDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EE81C705A7200C7FDB1 /* QNHTTPDataController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc-exceptions"; }; };
+		8AE64EEE1C705A7200C7FDB1 /* QNHTTPDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EEA1C705A7200C7FDB1 /* QNHTTPDataOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc-exceptions"; }; };
 		8AE64F001C70613400C7FDB1 /* QNHTTPDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EEA1C705A7200C7FDB1 /* QNHTTPDataOperation.m */; };
 		8AE64F011C70646400C7FDB1 /* QNHTTPDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EE81C705A7200C7FDB1 /* QNHTTPDataController.m */; };
 		8AE64F021C70646900C7FDB1 /* QNDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE64EE61C705A7200C7FDB1 /* QNDataOperation.m */; };

@@ -394,7 +394,7 @@ static QNBehaviours *sharedBehaviours = nil;
                 } break;
                 case TypePath: {
                     NSString *urlEncodedValue = [[value description] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-                    path = [path stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@":%@", key] withString:value ? urlEncodedValue : @"*"].mutableCopy;
+                    path = [path stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@":%@", key] withString:value && [[value description] length] > 0 ? urlEncodedValue : @"*"].mutableCopy;
                 } break;
                 case TypeQuery: {
                     NSString *urlEncodedKey = [param.key stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
@@ -502,7 +502,8 @@ static QNBehaviours *sharedBehaviours = nil;
                     if (completion) {
                         
                         NSMutableDictionary *response = headers.mutableCopy;
-                        [response addEntriesFromDictionary:body.allKeys.count > 0 ? body : @{
+                        if (body.allKeys.count > 0 || operation.responseBody[@"response"])
+                            [response addEntriesFromDictionary:body.allKeys.count > 0 ? body : @{
                             @"data" : operation.responseBody[@"response"]
                         }];
                         completion([response copy], operation.error);
